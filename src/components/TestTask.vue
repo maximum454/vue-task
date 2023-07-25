@@ -5,6 +5,7 @@
 				<div class="item-stuff" v-for="item in arrUser" :key="item.id">
 					{{ item.name }}
 				</div>
+				<div class="stuff-selected__num">selected: {{arrUser.length}} / 6</div>
 			</div>
 			<div class="stuff-selected__item">
 				<div class="item-stuff" v-for="item in arrOther" :key="item.id">
@@ -159,6 +160,10 @@ export default {
 		flex-wrap: wrap;
 		gap: 10px;
 		align-items: flex-start;
+	}
+	&__num{
+		flex: 1 0 100%;
+		text-align: center;
 	}
 }
 
